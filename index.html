@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-    <head></head>
+    <head>
+    </head>
     <body>
         <div style="color:blueviolet">
             <h1>hi my name is agnia</h1>
             <p>my favourite colour is purple </p>
             <p>i am a girl</p>
-            <p>I am 6-7</p>
+            <p>I am <span id="agniasAge"></span></p>
             <p>my favourite animal is a <img src="tiger.webp" width="100px" style="vertical-align: middle;"/></p>
         </div>
         <div style="color: hotpink;">
-            <h1 style="font-family: serif;">hI i am agnia's mum</h1>
+            <h1 style="font-family: serif;">hi i am agnia's mum</h1>
             <p>my favourite colour is  pink</p>
             <p>my name is iuliia</p>
             <p>i am a lady</p>
-            <p>i am 35</p>
+            <p>i am <span id="mummysAge"></span></p>
             <p>my favourite animal is a <img src="rhino.jpeg" width="100px" style="vertical-align: middle;"/></p>          
         </div>
         <div style="color:forestgreen">
@@ -21,8 +22,23 @@
             <p>My favourite colour is green</p>
             <p>my name is kartik</p>
             <p>I am a man</p>
-            <p>I am 33-34</p>
+            <p>I am <span id="daddysAge"></span></p>
             <p>My favourite animal is a <img src="sloth.jpeg" width="100px" style="vertical-align: middle;"/></p>
         </div>
+        <script>
+
+            function calculateAge(birthday) { // birthday is a date
+                var ageDifMs = Date.now() - birthday;
+                var ageDate = new Date(ageDifMs); // miliseconds from epoch
+                return Math.abs(ageDate.getUTCFullYear() - 1970);
+            }
+            
+            agniasElement = document.getElementById("agniasAge");
+            agniasElement.textContent = calculateAge(new Date("2017/05/09"));
+            mummysElement = document.getElementById("mummysAge");
+            mummysElement.textContent = calculateAge(new Date("1989/01/23"));
+            daddysElement = document.getElementById("daddysAge");
+            daddysElement.textContent = calculateAge(new Date("1990/12/04"));
+        </script>
     </body>
 </html>
