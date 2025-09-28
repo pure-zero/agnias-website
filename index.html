@@ -25,6 +25,14 @@
             <p>I am <span id="daddysAge"></span></p>
             <p>My favourite animal is a <img src="sloth.jpeg" width="100px" style="vertical-align: middle;"/></p>
         </div>
+        <div style="color:yellow">
+            <h1>hi i am, agnia's  sister</h1>
+            <p>My favourite colour is yellow</p>
+            <p>my name is mira</p>
+            <p>I am a girl</p>
+            <p>I am <span id="sistersAge"></span></p>
+            <p>My favourite animal is a <img src="bunny.jpg" width="100px" style="vertical-align: middle;"/></p>
+        </div>
         <script>
 
             function calculateAge(birthday) { // birthday is a date
@@ -39,6 +47,8 @@
             mummysElement.textContent = calculateAge(new Date("1989/01/23"));
             daddysElement = document.getElementById("daddysAge");
             daddysElement.textContent = calculateAge(new Date("1990/12/04"));
+            sistersElement = document.getElementById("sistersAge");
+            sistersElement.textContent = calculateAge(new Date("2025/07/23"));
         </script>
     </body>
 </html>
